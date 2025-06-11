@@ -19,7 +19,7 @@ export default function Navigation() {
     <nav className="navigation">
       <div className="nav-container">
         <div className="nav-content">
-          <Link to="/" className="nav-logo">
+          <Link to="/itda" className="nav-logo">
             <img src={`${process.env.PUBLIC_URL}/images/logo1.png`} alt="잇다 로고" className="logo-img" />
           </Link>
 
