@@ -1,0 +1,276 @@
+.volunteer-page {
+  padding: 2rem;
+  background: linear-gradient(to bottom, var(--color-pink-50), var(--color-pink-100));
+  min-height: 100vh;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.page-header {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.page-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: var(--color-pink-700);
+  margin-bottom: 1rem;
+  text-shadow: 2px 2px 4px rgba(255, 107, 157, 0.1);
+}
+
+.page-description {
+  font-size: 1.1rem;
+  color: var(--color-pink-600);
+  text-align: center;
+  max-width: 600px;
+  margin: 0 auto;
+  opacity: 0.9;
+}
+
+/* 필터 섹션 */
+.filter-section {
+  background: white;
+  padding: 1.5rem;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-lg);
+  margin-bottom: 2rem;
+  border: 1px solid var(--color-pink-200);
+}
+
+.filter-title {
+  font-size: 1.25rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+  color: var(--color-pink-500);
+}
+
+.filter-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.filter-button {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid var(--color-pink-200);
+  border-radius: var(--radius);
+  background: white;
+  font-size: 1rem;
+  color: var(--color-text-primary);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.filter-button:hover {
+  border-color: var(--color-pink-500);
+  background: var(--color-pink-50);
+}
+
+.filter-button.active {
+  background: var(--color-pink-500);
+  color: white;
+  border-color: var(--color-pink-500);
+}
+
+.filter-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 1rem;
+  padding-top: 1rem;
+  border-top: 1px solid var(--color-pink-100);
+}
+
+.filter-count {
+  color: var(--color-text-secondary);
+  font-size: 0.875rem;
+}
+
+/* 활동 카드 */
+.activities-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+}
+
+.activity-card {
+  background: white;
+  border-radius: 0.75rem;
+  overflow: hidden;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  border: 1px solid var(--color-pink-200);
+}
+
+.activity-card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-lg);
+  border-color: var(--color-pink-500);
+}
+
+.activity-image {
+  height: 200px;
+  background: linear-gradient(135deg, var(--color-pink-500), var(--color-pink-600));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 4rem;
+  color: white;
+  position: relative;
+}
+
+.status-badge {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  padding: 0.5rem 1rem;
+  border-radius: var(--radius-full);
+  font-size: 0.875rem;
+  font-weight: 600;
+  background: white;
+  color: var(--color-pink-600);
+  box-shadow: var(--shadow);
+}
+
+.type-badge {
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  padding: 0.5rem 1rem;
+  border-radius: var(--radius-full);
+  font-size: 0.875rem;
+  font-weight: 600;
+  background: rgba(255, 255, 255, 0.9);
+  color: var(--color-pink-600);
+  box-shadow: var(--shadow);
+}
+
+.activity-content {
+  padding: 1.5rem;
+}
+
+.activity-title {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--color-text-primary);
+  margin-bottom: 1rem;
+}
+
+.activity-info {
+  display: grid;
+  gap: 0.75rem;
+  margin-bottom: 1rem;
+}
+
+.info-row {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--color-text-secondary);
+  font-size: 0.875rem;
+}
+
+.info-icon {
+  color: var(--color-pink-500);
+  width: 1.25rem;
+  height: 1.25rem;
+}
+
+.activity-description {
+  color: var(--color-text-primary);
+  line-height: 1.5;
+  margin-bottom: 1rem;
+}
+
+.activity-requirements {
+  font-size: 0.875rem;
+  color: var(--color-text-secondary);
+  margin-bottom: 1.5rem;
+}
+
+.activity-requirements strong {
+  color: var(--color-text-primary);
+}
+
+.activity-button {
+  width: 100%;
+  padding: 0.75rem;
+  border-radius: var(--radius);
+  font-weight: 500;
+  text-align: center;
+  transition: all 0.2s;
+  cursor: pointer;
+}
+
+.activity-button.recruiting {
+  background: var(--color-pink-500);
+  color: white;
+}
+
+.activity-button.recruiting:hover {
+  background: var(--color-pink-600);
+}
+
+.activity-button.closed {
+  background: var(--color-gray-100);
+  color: var(--color-gray-600);
+  cursor: not-allowed;
+}
+
+/* 버튼 */
+.btn {
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.5rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.btn-primary {
+  background: var(--color-pink-500);
+  color: white;
+  border: none;
+  width: 100%;
+}
+
+.btn-primary:hover {
+  background: var(--color-pink-600);
+}
+
+.btn-outline {
+  background: transparent;
+  border: 1px solid var(--color-pink-500);
+  color: var(--color-pink-500);
+}
+
+.btn-outline:hover {
+  background: var(--color-pink-50);
+}
+
+.btn-ghost {
+  background: transparent;
+  color: var(--color-pink-500);
+  border: none;
+}
+
+.btn-ghost:hover {
+  background: var(--color-pink-50);
+}
+
+/* 모바일 대응 */
+@media (max-width: 768px) {
+  .filter-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .activities-grid {
+    grid-template-columns: 1fr;
+  }
+} 
