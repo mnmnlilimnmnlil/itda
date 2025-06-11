@@ -1,11 +1,12 @@
 .store-page {
-  margin-top: 7vh;
+  margin-top: 5vh;
   padding: 2rem 0;
   background: linear-gradient(to bottom, var(--color-pink-50), white);
   min-height: 100vh;
 }
 
 .store-header {
+  margin-top:2rem;
   text-align: center;
   margin-bottom: 3rem;
 }

@@ -1,5 +1,5 @@
-import { Link } from "react-router-dom"
-import "./Footer.css"
+import { Link } from "react-router-dom";
+import "./Footer.css";
 
 export default function Footer() {
   return (
@@ -8,7 +8,7 @@ export default function Footer() {
         <div className="footer-grid">
           <div>
             <div className="footer-logo">
-              <img src="/images/logo2.png" alt="잇다 로고" />
+              <img src={`${process.env.PUBLIC_URL}/images/logo2.png`} alt="잇다 로고" />
             </div>
             <p className="footer-description">
               유기견과 사람을 따뜻하게 잇는 공간입니다.
@@ -58,5 +58,5 @@ export default function Footer() {
         </div>
       </div>
     </footer>
-  )
+  );
 }

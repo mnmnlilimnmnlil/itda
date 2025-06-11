@@ -1,5 +1,4 @@
 .dogs-page {
-  
   max-width: 100vw;
   margin: 0 auto;
   padding: 2rem;
@@ -14,7 +13,7 @@
 }
 
 .page-header {
-  margin-top: 6vh;
+  margin-top:4rem;
   text-align: center;
   margin-bottom: 3rem;
 }
@@ -27,7 +26,7 @@
 }
 
 .page-description {
-  color: var(--text-secondary);
+  color: #4B5563;
   font-size: 1.1rem;
 }
 

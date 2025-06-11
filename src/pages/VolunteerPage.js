@@ -17,6 +17,7 @@ const volunteerActivities = [
     description: "보호소 강아지들과 함께 산책하며 운동과 사회화를 도와주세요",
     requirements: "동물을 사랑하는 마음, 편한 운동복 착용",
     status: "모집중",
+    image: "https://i.pinimg.com/736x/30/3b/24/303b243e19a2272f6bdc2f8f40401ac0.jpg"
   },
   {
     id: 2,
@@ -31,6 +32,7 @@ const volunteerActivities = [
     description: "보호소 시설 청소와 정리정돈을 통해 깨끗한 환경을 만들어주세요",
     requirements: "작업복 착용, 청소용품 지급",
     status: "모집중",
+    image: "https://i.pinimg.com/736x/1b/de/25/1bde255b178ee52f30434c7e4644dc6b.jpg"
   },
   {
     id: 3,
@@ -45,6 +47,7 @@ const volunteerActivities = [
     description: "보호소 강아지들의 목욕과 간단한 그루밍을 도와주세요",
     requirements: "물을 무서워하지 않는 분, 앞치마 지급",
     status: "모집중",
+    image: "https://i.pinimg.com/736x/cd/2f/8c/cd2f8c57c694c6d2b54afe8d7edf3bd7.jpg"
   },
   {
     id: 4,
@@ -59,6 +62,7 @@ const volunteerActivities = [
     description: "보호소 강아지들의 사회화 훈련을 도와주세요",
     requirements: "동물 훈련 경험 우대, 간식 지급",
     status: "마감",
+    image: "https://i.pinimg.com/736x/9a/3f/67/9a3f6774e0cd176b3422783147ddd3c0.jpg"
   },
   {
     id: 5,
@@ -73,6 +77,7 @@ const volunteerActivities = [
     description: "보호소 강아지들과 함께 산책하고 놀이를 통해 사회화를 도와주세요",
     requirements: "체력이 좋으신 분, 운동복 착용",
     status: "마감",
+    image: "https://i.pinimg.com/736x/c1/22/42/c122425d82dfac2ca2efff53b45a1619.jpg"
   },
   {
     id: 6,
@@ -87,6 +92,7 @@ const volunteerActivities = [
     description: "보호소 시설 개선 및 환경 정비를 도와주세요",
     requirements: "건설/인테리어 경험자 우대, 작업복 지급",
     status: "마감",
+    image: "https://i.pinimg.com/1200x/e2/f9/83/e2f983490dc0291e2ef8071ff230b6d7.jpg"
   }
 ]
 
@@ -171,8 +177,8 @@ export default function VolunteerPage() {
     <div className="volunteer-page">
       <div className="container">
         <div className="page-header">
-          <h1 className="stories-title">봉사활동 찾기</h1>
-          <p className="stories-description">유기견들을 위한 따뜻한 손길이 필요해요</p>
+          <h1 className="page-title">봉사활동 찾기</h1>
+          <p className="page-description">유기견들을 위한 따뜻한 손길이 필요해요</p>
         </div>
 
         {/* 필터 섹션 */}
@@ -270,8 +276,10 @@ export default function VolunteerPage() {
           <div className="activities-grid">
             {filteredActivities.map((activity) => (
               <div key={activity.id} className="activity-card">
-                <div className="activity-image">
-                  🤝
+                <div 
+                  className="activity-image"
+                  style={{ backgroundImage: `url(${activity.image})` }}
+                >
                   <div className={`status-badge ${activity.status === "모집중" ? "recruiting" : "closed"}`}>
                     {activity.status}
                   </div>
