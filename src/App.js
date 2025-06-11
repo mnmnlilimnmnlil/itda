@@ -1,5 +1,5 @@
 import React from "react";
-import { Routes, Route } from "react-router-dom";
+import { HashRouter, Routes, Route } from "react-router-dom";
 import { FavoritesProvider } from "./contexts/FavoritesContext";
 import Navigation from "./components/Navigation";
 import Footer from "./components/Footer";
@@ -15,20 +15,22 @@ import FavoritesPage from "./pages/FavoritesPage";
 function App() {
   return (
     <FavoritesProvider>
-      <Navigation />
-      <main>
-        <Routes>
-          <Route path="/itda" element={<HomePage />} />
-          <Route path="/dogs" element={<DogsPage />} />
-          <Route path="/dogs/:id" element={<DogDetailPage />} />
-          <Route path="/favorites" element={<FavoritesPage />} />
-          <Route path="/store" element={<StorePage />} />
-          <Route path="/store/:id" element={<ProductDetailPage />} />
-          <Route path="/stories" element={<StoriesPage />} />
-          <Route path="/volunteer" element={<VolunteerPage />} />
-        </Routes>
-      </main>
-      <Footer />
+      <HashRouter>
+        <Navigation />
+        <main>
+          <Routes>
+            <Route path="/" element={<HomePage />} />
+            <Route path="/dogs" element={<DogsPage />} />
+            <Route path="/dogs/:id" element={<DogDetailPage />} />
+            <Route path="/favorites" element={<FavoritesPage />} />
+            <Route path="/store" element={<StorePage />} />
+            <Route path="/store/:id" element={<ProductDetailPage />} />
+            <Route path="/stories" element={<StoriesPage />} />
+            <Route path="/volunteer" element={<VolunteerPage />} />
+          </Routes>
+        </main>
+        <Footer />
+      </HashRouter>
     </FavoritesProvider>
   );
 }
