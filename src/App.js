@@ -19,7 +19,7 @@ function App() {
         <Navigation />
         <main>
           <Routes>
-            <Route path="/itda" element={<HomePage />} />
+            <Route path="/" element={<HomePage />} />
             <Route path="/dogs" element={<DogsPage />} />
             <Route path="/dogs/:id" element={<DogDetailPage />} />
             <Route path="/favorites" element={<FavoritesPage />} />
