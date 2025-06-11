@@ -30,7 +30,7 @@ export default function Navigation() {
     <nav className="navigation">
       <div className="nav-container">
         <div className="nav-content">
-          <Link to="/" className="nav-logo" onClick={() => setIsOpen(false)}>
+          <Link to="/itda" className="nav-logo" onClick={() => setIsOpen(false)}>
             <img
               src={`${process.env.PUBLIC_URL}/images/logo1.png`}
               alt="잇다 로고"
